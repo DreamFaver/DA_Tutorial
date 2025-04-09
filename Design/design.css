@@ -1,0 +1,232 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8d7da; /* Light red text color for contrast */
+    background-color: #1b0000; /* Very dark red background */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Fullscreen Background Video */
+#video-section {
+    position: relative;
+    height: 100vh; /* Takes full viewport height */
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+#video-bg {
+    position: fixed; /* Fixed position to keep it in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8; /* Slight transparency for readability */
+}
+
+/* Overlay Text */
+.overlay-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 3em;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    color: #f8d7da; /* Light red text for visibility */
+    font-family: 'Vazir', sans-serif; /* Custom font for Persian */
+}
+
+/* Scroll Down Prompt */
+.scroll-down {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #f8d7da; /* Light red text */
+    animation: bounce 2s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main Content Container */
+#content {
+    padding: 50px 20px;
+    background-color: #300000; /* Dark red background for content */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px; /* Rounded corners */
+    margin: 0 auto;
+    max-width: 1200px; /* Restrict width */
+    position: relative;
+    z-index: 1;
+    border: 5px solid #f8d7da; /* Light red border */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(100, 0, 0, 0.9); /* Dark red navigation bar */
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+nav a {
+    color: #f8d7da; /* Light red text */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(200, 0, 0, 0.9); /* Slightly lighter red on hover */
+}
+
+/* Language Switcher */
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(100, 0, 0, 0.9); /* Dark red background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.language-switcher select {
+    background-color: transparent;
+    border: none;
+    color: #f8d7da; /* Light red text */
+    font-size: 1em;
+    outline: none;
+    font-family: 'Roboto', sans-serif; /* Font for dropdown */
+}
+
+.language-switcher select option {
+    background-color: #1b0000; /* Very dark red background for options */
+    color: #f8d7da; /* Light red text */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(100, 0, 0, 0.9); /* Dark red footer */
+    color: #f8d7da; /* Light red text */
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #2a0000; /* Darker red for cards */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2); /* Light border */
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #400000; /* Darker red border */
+}
+
+/* Card Description */
+.card-description {
+    padding: 10px;
+    font-size: 1em;
+    color: #f8d7da; /* Light red text */
+    font-family: 'Roboto', sans-serif; /* Font for card description */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Shine Effect */
+.card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Light shine effect */
+    opacity: 0.7; /* Make sure shine effect is visible */
+    pointer-events: none; /* Make sure it doesn’t interfere with mouse events */
+    z-index: 1; /* Ensure shine is above other content but below text */
+    border-radius: 15px; /* Match card border radius */
+    transition: none; /* No fade-out transition */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 2em;
+    }
+
+    .scroll-down {
+        font-size: 1.2em;
+        bottom: 15%;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    #content {
+        padding: 30px 15px;
+        max-width: 100%;
+        border: 3px solid #f8d7da; /* Adjust border width for smaller screens */
+    }
+}
