@@ -1,13 +1,124 @@
 <!DOCTYPE html>
-<html lang="pr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Game Tutorial For [Dimentional Antilogy]">
-        <title>[Dimentional Antilogy]</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Tutorial for [Dimentional Antilogy]">
+    <title>[Dimentional Antilogy] Tutorial</title>
+    <link rel="stylesheet" href="Design/styles.css">
+</head>
+<body>
 
-    <body>
-        
-    </body>
+<!-- Fullscreen Video Section -->
+<section id="video-section">
+    <video id="video-bg" autoplay muted loop>
+        <source src="./Resources/Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay-text">
+        [Dimentional Antilogy]
+    </div>
+    <div class="scroll-down">
+        Scroll Down
+    </div>
+</section>
+
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <select id="language-selector">
+        <option value="en" selected>English</option>
+        <option value="fa">Persian</option>
+    </select>
+</div>
+
+<!-- Main Content Below the Video -->
+<div id="content">
+    <header>
+        <h1 data-en="[Your Game Name] Tutorial" data-fa="[تناقض ابعادی] راهنما">[Dimentional Antilogy] Tutorial</h1>
+        <p data-en="Master your gameplay with our detailed guide" data-fa="با راهنمای دقیق ما، بازی خود را بهتر کنید">Master your gameplay with our detailed guide</p>
+    </header>
+
+    <!-- Tips Section -->
+    <section id="tips">
+        <h2 data-en="Tips and Description" data-fa="نکات و توضیحات">Tips and Description</h2>
+        <p data-en="Here are some valuable tips to enhance your gaming experience:" data-fa="در اینجا چند نکته ارزشمند برای بهبود تجربه بازی شما وجود دارد:">Here are some valuable tips to enhance your gaming experience:</p>
+        <ul>
+            <li data-en="Tip 1: Always check your surroundings." data-fa="نکته 1: همیشه محیط اطراف خود را بررسی کنید.">Tip 1: Always check your surroundings.</li>
+            <li data-en="Tip 2: Use the map to navigate efficiently." data-fa="نکته 2: از نقشه برای پیمایش به طور مؤثر استفاده کنید.">Tip 2: Use the map to navigate efficiently.</li>
+            <li data-en="Tip 3: Upgrade your skills regularly." data-fa="نکته 3: مهارت‌های خود را به طور منظم به‌روزرسانی کنید.">Tip 3: Upgrade your skills regularly.</li>
+        </ul>
+    </section>
+
+    <!-- Controls Section with Cards -->
+    <section id="controls">
+        <h2 data-en="Game Controls" data-fa="کنترل‌های بازی">Game Controls</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="Resources/JoyStick_Handler.png" alt="Move Forward">
+                <div class="card-description" data-en="Move Left Or Right <strong>JoyStick</strong>" data-fa="حرکت <strong>جوی استیک</strong>">Move Left Or Right <strong>JoyStick</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/Run.png" alt="Move Backward">
+                <div class="card-description" data-en="Run <strong>Button</strong>" data-fa="دویدن <strong>دکمه</strong>">Run <strong>Button</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/Inspect.png" alt="Inspect">
+                <div class="card-description" data-en="Inspect <strong>Button</strong>" data-fa="دیدن <strong>دکمه</strong>">Inspect <strong>Button</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/PickUp.png" alt="Pickup">
+                <div class="card-description" data-en="Pickup <strong>Button</strong>" data-fa="برداشتن <strong>دکمه</strong>">Jump <strong>Button</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/Pause.png" alt="Pause">
+                <div class="card-description" data-en="Pause <strong>Button</strong>" data-fa="توقف <strong>دکمه</strong>">Pause <strong>Button</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/Phone.png" alt="Info">
+                <div class="card-description" data-en="Info <strong>Button</strong>" data-fa="اطلاعات <strong>دکمه</strong>">Info <strong>Button</strong></div>
+            </div>
+            <div class="card">
+                <img src="Resources/Backpack.png" alt="Inventory">
+                <div class="card-description" data-en="Inventory <strong>Button</strong>" data-fa="کوله پشتی <strong>دکمه</strong>">Inventory <strong>Button</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puzzle Solutions Section with Cards -->
+    <section id="puzzles">
+        <h2 data-en="How to Solve Puzzles" data-fa="چگونه معماها را حل کنیم">How to Solve Puzzles</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="path_to_puzzle_image1.jpg" alt="Puzzle Tip 1">
+                <div class="card-description" data-en="Tip 1: Observation is key." data-fa="نکته 1: مشاهده کلید است.">Tip 1: Observation is key.</div>
+            </div>
+            <div class="card">
+                <img src="path_to_puzzle_image2.jpg" alt="Puzzle Tip 2">
+                <div class="card-description" data-en="Tip 2: Look for patterns." data-fa="نکته 2: به دنبال الگوها باشید.">Tip 2: Look for patterns.</div>
+            </div>
+            <div class="card">
+                <img src="path_to_puzzle_image3.jpg" alt="Puzzle Tip 3">
+                <div class="card-description" data-en="Tip 3: Use your resources wisely." data-fa="نکته 3: از منابع خود به درستی استفاده کنید.">Tip 3: Use your resources wisely.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directions Section with Game Map -->
+    <section id="directions">
+        <h2 data-en="Where to Go" data-fa="کجا برویم">Where to Go</h2>
+        <p data-en="Follow this guide to navigate through the levels:" data-fa="این راهنما را دنبال کنید تا در سطوح پیمایش کنید:">Follow this guide to navigate through the levels:</p>
+        <img src="./Resources/map.png" alt="Game Map" style="width: 100%; border: 3px solid #f8d7da; border-radius: 15px;">
+    </section>
+    <section id="">
+        <h2 data-en="Other Information Will Be Add Soon" data-fa="اطلاعات دیگر به زودی اضافه خواهد شد">Other Information Will Be Add Soon...</h2>
+        <img src="./Resources/Game_Icon_Round.png" alt="Game Map" style="width: 10%; border: 3px solid #f8d7da; border-radius: 15px;">
+    </section>
+
+    <footer>
+        <p data-en="&copy; 2024 [Dimentional Antilogy] Tutorial | Created by [Dream_Faver]" data-fa="© 2024 [تناقض ابعادی] راهنما | طراحی شده توسط [ِدریم فی-ور]">&copy; 2024 [Dimentional Antilogy] Tutorial | Created by [Dream_Faver]</p>
+    </footer>
+</div>
+
+<script src="Scripts/scripts.js"></script>
+</body>
 </html>
